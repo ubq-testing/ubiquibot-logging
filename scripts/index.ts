@@ -57,7 +57,7 @@ let logs: Logs[] = [];
 
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-const channel = supabaseClient
+supabaseClient
   .channel("table-db-changes")
   .on(
     "postgres_changes",
