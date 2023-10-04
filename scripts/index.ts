@@ -38,7 +38,7 @@ const updateLogTable = () => {
         <td><a href="${commentUrl}">Comment - ${log.comment_id}</a></td>
     `;
     logBody.appendChild(row);
-    let logCell = document.getElementsByClassName("log-cell");
+    const logCell = document.getElementsByClassName("log-cell");
     if (validJson) {
       // show modal button for valid json row
       const showMoreButton = document.getElementById(`button_${classId}`) as HTMLButtonElement;
