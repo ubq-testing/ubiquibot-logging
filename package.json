@@ -6,9 +6,10 @@
   "author": "Ubiquity DAO",
   "license": "MIT",
   "engines": {
-    "node": ">=v20.3.2"
+    "node": ">=v20.8.0"
   },
   "scripts": {
+    "build": "tsc && tsx ./scripts/esbuild.ts",
     "format": "run-s format:prettier format:lint",
     "format:lint": "eslint --fix .",
     "format:prettier": "prettier --write ."
@@ -18,7 +19,7 @@
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
     "@supabase/supabase-js": "^2.32.0",
-    "@types/node": "^20.3.2",
+    "@types/node": "^20.8.0",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
     "esbuild": "^0.19.2",
@@ -34,5 +35,8 @@
     "dao",
     "ubiquity",
     "open-source"
-  ]
+  ],
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
 }

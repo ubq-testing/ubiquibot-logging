@@ -11,7 +11,7 @@ const jsonModal = document.getElementById("json-modal") as HTMLDivElement;
 const closeModalButton = document.getElementById("close-modal") as HTMLButtonElement;
 const jsonContent = document.getElementById("json-content") as HTMLDivElement;
 
-const openJsonModal = (validJson) => {
+const openJsonModal = (validJson: string) => {
   jsonContent.textContent = validJson;
 
   jsonModal.style.display = "flex";
@@ -70,7 +70,7 @@ supabaseClient
   )
   .subscribe();
 
-const handlePayload = (logEntry) => {
+const handlePayload = (logEntry: any) => {
   if (logEntry?.eventType !== "INSERT") return;
   logs.push(logEntry.new);
   updateLogTable();

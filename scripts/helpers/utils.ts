@@ -12,7 +12,7 @@ export const createGitHubCommentURL = (orgName: string, repoName: string, issueN
   return `https://github.com/${orgName}/${repoName}/issues/${issueNumber}#issuecomment-${commentId}`;
 };
 
-export const isValidJson = (jsonString) => {
+export const isValidJson = (jsonString: string): boolean => {
   try {
     JSON.parse(jsonString);
     return true;
@@ -21,7 +21,7 @@ export const isValidJson = (jsonString) => {
   }
 };
 
-export const generateRandomId = (length) => {
+export const generateRandomId = (length: Number) => {
   return [...Array(length)].map(() => Math.random().toString(36)[2]).join("");
 };
 
